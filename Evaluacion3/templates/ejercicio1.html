@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/static/css/ejercicio1.css">
+    <title></title>
+</head>
+<body>
+<div class="container">
+    <h1>Formulario de Notas</h1>
+
+    <form method="POST">
+        <label for="nota1">Nota 1:</label>
+        <input type="text" name="nota1" step="1" min="10" max="70" required><br><br>
+
+        <label for="nota2">Nota 2:</label>
+        <input type="text" name="nota2" step="1" min="10" max="70" required><br><br>
+
+        <label for="nota3">Nota 3:</label>
+        <input type="text" name="nota3" step="1" min="10" max="70" required><br><br>
+
+        <label for="asistencia">Asistencia (%):</label>
+        <input type="text" name="asistencia" step="1" min="0" max="100" required><br><br>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+    {% if promedio is not none %}
+    <div class="resultado">
+        <p>{{ promedio }}</p>
+        <p>{{ estado }}</p>
+    </div>
+    {% endif %}
+</div>
+</body>
+</html>
